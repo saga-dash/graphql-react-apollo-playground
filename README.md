@@ -21,15 +21,6 @@ react, apollo, graphql-codegen playground
 - deployment
 - subscription
 
-## Setup
-
-```
-$ docker-compose up -d
-$ docker exec -it (your-cloned-dirname)-graphql_mysql_1 bash
-# root@01f9ce595ad9:/# mysql -u root -p # Enter password
-mysql> CREATE DATABASE IF NOT EXISTS dev;
-```
-
 ## Development
 
 ```

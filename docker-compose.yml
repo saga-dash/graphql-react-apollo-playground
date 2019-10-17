@@ -12,14 +12,10 @@ services:
       MYSQL_DATABASE: dev
       MYSQL_USER: root
     volumes:
-      - dbdata:/var/lib/mysql
+      - ./shared/db:/var/lib/mysql
+      - ./resources/:/docker-entrypoint-initdb.d/
   redis:
     image: redis:latest
     ports:
       - '6379:6379'
     command: redis-server --appendonly yes
-    volumes:
-      - redisdata:/data
-volumes:
-  dbdata:
-  redisdata:
